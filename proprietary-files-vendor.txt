@@ -12,6 +12,7 @@ vendor/etc/floating_feature.xml
 vendor/etc/hearing_aid_audio_policy_configuration.xml
 vendor/etc/mixer_gains.xml
 vendor/etc/mixer_paths.xml
+vendor/etc/mixer_paths_ti.xml
 vendor/etc/mixer_usb_gray.xml
 vendor/etc/mixer_usb_white.xml
 vendor/etc/playback_record_audio_policy_configuration.xml
@@ -65,6 +66,10 @@ vendor/lib64/soundfx/libmysound.so
 vendor/lib64/soundfx/libmyspace.so
 vendor/lib64/soundfx/libplaybackrecorder.so
 vendor/lib64/vendor.samsung.hardware.audio@1.0.so
+
+# BLUETOOTH
+vendor/lib/libbt-vendor.so
+vendor/lib64/libbt-vendor.so
 
 # CAMERA
 vendor/lib/libcamera2ndk_vendor.so
@@ -157,7 +162,10 @@ vendor/lib64/libion_exynos.so
 # KEYMASTER
 -vendor/lib64/libskeymaster4device.so
 vendor/lib64/libkeymaster4_1support.so
+vendor/lib64/libkeymaster_helper.so
 
+# NFC
+vendor/firmware/nfc/libpn553_fw.so
 
 # OMX
 vendor/lib/omx/libOMX.Exynos.AVC.Decoder.so
@@ -206,21 +214,27 @@ vendor/etc/plmn_delta_hktw.bin
 vendor/etc/plmn_delta_usagsm.bin
 vendor/etc/plmn_se13.bin
 vendor/lib/libaudio-ril.so
+vendor/lib/libengmode_client.so
 vendor/lib/libmdf.so
 vendor/lib/libreference-ril.so
 vendor/lib/libril.so
 vendor/lib/librilutils.so
+vendor/lib/libsec-ril-dsds.so
 vendor/lib/libsec-ril.so
+vendor/lib/libsecril-client.so
 vendor/lib/libsecure_storage.so
 vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
 vendor/lib/vendor.samsung.hardware.radio.channel@2.0.so
 vendor/lib/vendor.samsung.hardware.radio@2.0.so
 vendor/lib/vendor.samsung.hardware.radio@2.1.so
+vendor/lib64/libengmode_client.so
 vendor/lib64/libmdf.so
 vendor/lib64/libreference-ril.so
 vendor/lib64/libril.so
 vendor/lib64/librilutils.so
+vendor/lib64/libsec-ril-dsds.so
 vendor/lib64/libsec-ril.so
+vendor/lib64/libsecril-client.so
 vendor/lib64/libsecure_storage.so
 vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
 vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
@@ -229,7 +243,9 @@ vendor/lib64/vendor.samsung.hardware.radio@2.1.so
 
 ### SECNATIVE
 vendor/lib/libsecnativefeature.so
+vendor/lib/libsemnativecarrierfeature.so
 vendor/lib64/libsecnativefeature.so
+vendor/lib64/libsemnativecarrierfeature.so
 
 # TEEGRIS
 vendor/bin/tzdaemon
@@ -277,20 +293,22 @@ vendor/lib64/vendor.samsung_slsi.hardware.configstore@1.0.so
 ### SAMSUNG_SLSI_HWC
 vendor/bin/hw/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service
 vendor/etc/init/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service.rc
-vendor/lib64/hw/hwcomposer.exynos9611.so
+vendor/lib/hw/hwcomposer.exynos9611.so
 vendor/lib/libExynosHWCService.so
 vendor/lib/libGrallocWrapper.so
 vendor/lib/libexynosdisplay.so
+vendor/lib/libexynosgraphicbuffer.so
 vendor/lib/libexynosgscaler.so
 vendor/lib/libexynosscaler.so
 vendor/lib/libexynosutils.so
 vendor/lib/libexynosv4l2.so
-vendor/lib/hw/hwcomposer.exynos9611.so
+vendor/lib64/hw/hwcomposer.exynos9611.so
 vendor/lib64/libExynosHWCService.so
 vendor/lib64/libGrallocWrapper.so
 vendor/lib64/libacryl.so
 vendor/lib64/libacryl_plugin_slsi_hdr10.so
 vendor/lib64/libexynosdisplay.so
+vendor/lib64/libexynosgraphicbuffer.so
 vendor/lib64/libexynosgscaler.so
 vendor/lib64/libexynosscaler.so
 vendor/lib64/libexynosutils.so
@@ -363,7 +381,6 @@ vendor/firmware/kernel_bin_mfb.bin
 vendor/firmware/kernel_bin_mobile_vgg.bin
 vendor/firmware/kernel_bin_nfd.bin
 vendor/firmware/mfc_fw.bin
-vendor/firmware/nfc/libpn553_fw.so
 vendor/firmware/param_ti.bin
 vendor/firmware/rtdsp.bin
 vendor/firmware/rtdsp_param.bin
