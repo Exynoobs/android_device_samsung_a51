@@ -1,4 +1,4 @@
-# Proprietary files - from Samsung package version A515FXXU4EUD7, unless pinned
+# Proprietary files - from Samsung package version A515FXXU5EUG3, unless pinned
 
 ### CAMERA
 # Copyied by vendor_init which needs read access
