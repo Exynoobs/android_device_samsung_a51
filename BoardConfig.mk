@@ -13,31 +13,27 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include device/samsung/exynos9611-common/BoardConfigPlatform.mk
+## Inherit from the common tree
+include device/samsung/exynos9611-common/BoardConfigCommon.mk
+
+## Inherit from the proprietary configuration
 include vendor/samsung/a51/BoardConfigVendor.mk
 
 DEVICE_PATH := device/samsung/a51
 
-# APEX image
+## APEX image
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
-PRODUCT_PLATFORM := exynos9611
 
 TARGET_OTA_ASSERT_DEVICE := a51
 
 TARGET_SPECIFIC_HEADER_PATH += $(DEVICE_PATH)/hardware/include
 
-### DISPLAY
+## Display
 TARGET_SCREEN_DENSITY := 420
 
-### KERNEL
+## Kernel
 TARGET_KERNEL_CONFIG := exynos9610-a51xx_defconfig
 
-### SYSTEM PROPS
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-
-### VENDOR SECURITY PATCH DATE
-VENDOR_SECURITY_PATCH := 2021-05-01
-
-### VENDOR PROPS
+## Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
